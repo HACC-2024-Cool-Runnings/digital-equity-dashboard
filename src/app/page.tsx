@@ -6,7 +6,7 @@ export default function Home() {
 				<nav>
 					<ul>
 						<li>
-							<a href="/page1">Page 1</a>
+							<a href="/notes">Notes</a>
 						</li>
 					</ul>
 				</nav>
