@@ -12,14 +12,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.16",
-    "react": "^18",
-    "react-dom": "^18"
+    "@libsql/client": "^0.14.0",
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
+    "leaflet": "^1.9.4",
+    "next": "^14.2.16",
+    "pg": "^8.13.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "drizzle-kit": "^0.26.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.16",
     "postcss": "^8",
