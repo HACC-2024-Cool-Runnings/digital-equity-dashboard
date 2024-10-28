@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import MapComponent from './MapComponent';
 
 const TestDatabase: React.FC = () => {
-	const [data, setData] = useState<any[]>([]);
+	const [data, setData] = useState<unknown[]>([]);
 	const [caiType, setCaiType] = useState<string[]>(['all']);
 	const [island, setIsland] = useState<string[]>(['all']);
 	const [city, setCity] = useState<string[]>(['all']);
