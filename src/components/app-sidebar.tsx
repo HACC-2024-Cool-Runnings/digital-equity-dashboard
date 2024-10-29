@@ -3,13 +3,17 @@ import { House, NotebookPen, Smartphone, Wifi, ShieldCheck } from 'lucide-react'
 import {
 	Sidebar,
 	SidebarContent,
+	SidebarFooter,
 	SidebarGroup,
 	SidebarGroupContent,
 	SidebarGroupLabel,
 	SidebarMenu,
 	SidebarMenuButton,
 	SidebarMenuItem,
+	SidebarRail,
+	SidebarSeparator,
 } from '@/components/ui/sidebar';
+import { ModeToggle } from './mode-toggle';
 
 const items = [
 	{
@@ -45,6 +49,7 @@ export function AppSidebar() {
 			<SidebarContent>
 				<SidebarGroup>
 					<SidebarGroupLabel>Hawai&apos;i Digital Equity Dashboard</SidebarGroupLabel>
+					<SidebarSeparator />
 					<SidebarGroupContent>
 						<SidebarMenu>
 							{items.map((item) => (
@@ -61,6 +66,10 @@ export function AppSidebar() {
 					</SidebarGroupContent>
 				</SidebarGroup>
 			</SidebarContent>
+			<SidebarFooter>
+				<ModeToggle />
+			</SidebarFooter>
+			<SidebarRail />
 		</Sidebar>
 	);
 }
