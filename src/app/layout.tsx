@@ -1,5 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+
+import { ThemeProvider } from '@/components/theme-provider';
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { AppSidebar } from '@/components/app-sidebar';
+
 import './globals.css';
 import '/styles/index.sass';
 
@@ -27,15 +32,16 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<nav className="flex justify-center gap-4 p-4 text-white">
-					<a href="/" className="hover:underline">
-						Home
-					</a>
-					<a href="/notes" className="hover:underline">
-						Notes
-					</a>
-				</nav>
-				{children}
+				<ThemeProvider attribute="class" defaultTheme="dark">
+					<SidebarProvider>
+						<AppSidebar />
+
+						<main className="w-full p-4 pt-2 min-h-screen">
+							<SidebarTrigger />
+							{children}
+						</main>
+					</SidebarProvider>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
